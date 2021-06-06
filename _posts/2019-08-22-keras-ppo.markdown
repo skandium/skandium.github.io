@@ -1,0 +1,10 @@
+---
+layout: single
+title:  "Proximal policy optimization in Keras"
+date:   2019-08-22
+categories: projects
+---
+
+![us_elections](/assets/images/cartpole.png)
+
+[Github](https://github.com/skandium/keras-ppo)
