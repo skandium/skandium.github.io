@@ -30,7 +30,7 @@ On Mac, you probably want to install [iTerm2](https://iterm2.com/) instead of th
 
 ## Basics
 
-Initiate scripts with either `#!/bin/bash` or `#!/usr/bin/env bash`. 
+Initiate scripts with either `#!/bin/bash` or `#!/usr/bin/env bash` (on Mac you might have multiple versions of Bash - `which -a bash`).
 
 Put double quotes around `"$VARIABLE"`s to preserve the value.
 
@@ -45,7 +45,7 @@ Use `Ctrl+R` in terminal for searching through command history, `history` to see
 Use `info command` or `man command` or `help command` or `command --help` to get help with a command. `whatis command` also prints the first line description from the `man` manual.
 
 ## Aliases
-An alias allows a string to be substituted for a word when it is used as the first word of a simple command. Aliases have many uses cases, but one of the main ones is for increasing productivity. You can create simple shortcuts for repetitive tasks such as 
+An alias works as a shortcut that can be used for a long and tedious command such as
 
 connecting to a remote machine:
 `alias remote="ssh user@bigawesomemachine.cloud`
@@ -63,14 +63,13 @@ and even just pure laziness:
 
 `alias l="ls -lah"`
 
+Add these to `~/.bash_profile` for them to persist over shell sessions.
 
 ## Inspecting files
 
 Use `tree` to list contents of directories in a tree-like format.
 
-Read one end of a file
-
-`head -n 10 file` or `tail -n 10 file`
+Read one end of a file with `head -n 10 file` or `tail -n 10 file`
 
 Observe a dynamically changing file, such as a log
 
@@ -97,7 +96,7 @@ Use `grep` to search files for a (regex) pattern. This command takes a lot of us
 
 `git log -1 | grep '^commit' | cut -d " " -f 2`
 
-`sort` and `uniq` can be used together to remove duplicate lines of code, for example to count the number of duplicate lines in a .csv file
+`sort` and `uniq` can be used together to deal with duplicates, for example to count the number of duplicate lines in a .csv file
 
 `sort data.csv | uniq -d | wc -l`
 
@@ -150,7 +149,7 @@ Write all output to the void (discard it)
 
 ## Manipulating string
 
-You can also generate multiple strings with brace expansion:
+You can generate "a list" of strings with brace expansion:
 `mkdir /var/project/{data,models,conf,outputs}`
 
 There are [a few](https://tldp.org/LDP/abs/html/string-manipulation.html) nifty string manipulation functionalities built into Bash such as
@@ -161,7 +160,7 @@ for string replace or lower to upper case using translation
 
 `cat lower_case_file | tr 'a-z' 'A-Z'`.
 
-However, there are much more powerful languages such `awk` and `sed` built in to handle any string manipulation. You can also use Perl or Python with regular expressions for string manipulation of arbitrary complexity. Most likely you'd still use `awk`/`sed` for simpler patterns (if it's simple enough to Google it in a few minutes).
+However, there are much more powerful languages such `awk` and `sed` built in to handle any string manipulation. You can also use Perl or Python with regular expressions for string manipulation of arbitrary complexity.
 
 To get started with regular expressions, what I've found useful is interactive tutorials such as [RegexOne](https://regexone.com/) and playgrounds such as [regexr](https://regexr.com/).
 
@@ -170,8 +169,8 @@ To get started with regular expressions, what I've found useful is interactive t
 Ensure that a file exists:
 
 ```bash
-if [[ ! -f files/necessary.file ]]; then
-	mkdir -p files
+if [[ ! -f stuff/parent_of_files/files/necessary.file ]]; then
+	mkdir -p stuff/parent_of_files/files
 	touch files/necessary.file
 fi
 ```
@@ -245,8 +244,10 @@ curl \
   http://localhost:5000/invoke
 ```
 
-To kill jobs, `kill -9 PID` is the [most destructive](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_12_01.html#sect_12_01_02) option and impossible for jobs to ignore, but should be used as last resort. Start with Ctrl+C or `kill PID` (uses TERM signal by default).
+Is a process occupying a port? 
+`lsof -i :port_number`
 
+To [kill](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_12_01.html#sect_12_01_02) jobs, try `kill PID` first and `kill -9 PID` as the last resort.
 
 ## Variables
 
@@ -268,14 +269,11 @@ Use `local` to declare local scope variables in a function.
 
 There are a [few](https://www.thegeekstuff.com/2010/05/bash-shell-special-parameters/), but some useful ones
 
-`$? $@` etc
-
 `$?` - exit status of the last command
 `$#` - number of positional arguments for a script
 `$$` - process ID
 `$_` - absolute path of the shell
 `$0` - name of the script
-`$!` - PID of the last background script
 
 `[[ $? == 0 ]] && echo "Last command succeeded" || echo "Last command failed"`
 
@@ -316,10 +314,16 @@ done
 
 ## Varia
 
-Python code can be run inline, as a bridge between Bash and Python scripting
+Python code can be run inline in pipes - meaning you can use it to replace `awk`/`sed`/`perl` if necessary:
 
 ```bash
-python -c 'from sklearn.svm import SVC; from sklearn.multiclass import OneVsRestClassifier; from sklearn.metrics import accuracy_score; from sklearn.preprocessing import LabelBinarizer; X = [[1, 2], [2, 4], [4, 5], [3, 2], [3, 1]]; y = [0, 0, 1, 1, 2]; classif = OneVsRestClassifier(estimator=SVC(random_state=0)); y_preds = classif.fit(X, y).predict(X); print(accuracy_score(y, y_preds))';
+echo "Hello World" | python3 -c "import sys; import re; input = sys.stdin.read(); output = re.sub('Hello World', 'Privet Mir', input); print(output)"
+```
+
+Or do pretty much anything:
+
+```bash
+model_accuracy=$(python -c 'from sklearn.svm import SVC; from sklearn.multiclass import OneVsRestClassifier; from sklearn.metrics import accuracy_score; from sklearn.preprocessing import LabelBinarizer; X = [[1, 2], [2, 4], [4, 5], [3, 2], [3, 1]]; y = [0, 0, 1, 1, 2]; classif = OneVsRestClassifier(estimator=SVC(random_state=0)); y_preds = classif.fit(X, y).predict(X); print(accuracy_score(y, y_preds))';)
 ```
 
 Another way to feed multi line input to a command would be using the here document, for example:
