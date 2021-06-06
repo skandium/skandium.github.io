@@ -344,4 +344,4 @@ Use the `jq` command for working on the command line with JSON. [Examples](https
 
 [Data Science at the Command Line](https://www.datascienceatthecommandline.com/) - if you like the shell so much that you'd like to do EDA/modelling there :)
 
-Thanks for some tips and tricks to [Mark Cowan](https://hackology.co.uk/).
+Thanks for some tips and tricks to [Mark Cowan](https://hackology.co.uk/) who actually knows some Bash :)
