@@ -1,13 +1,14 @@
 ---
 layout: single
-title:  "Bash cheat sheet"
+title:  "Bash for Data Science"
 date:   2021-06-02
-categories: technical
+categories: peripherals
 ---
 
-## When to use it?
+## When to use Bash?
 
-As a data professional, chances are you already know Python, one of the most powerful general purpose languages which has libraries to do almost anything conveniently. Why, then, to learn Bash? Some of the use cases I've found in my work:
+As a data professional, chances are you already know Python, one of the most powerful general purpose languages which has libraries to do almost anything conveniently. Why, then, to learn Bash and the Unix shell in general?
+Some of the use cases I've found in my work:
 
 * Using file system locally/remotely
 * Monitoring system resources locally/remotely
@@ -344,5 +345,6 @@ Use the `jq` command for working on the command line with JSON. [Examples](https
 
 [Data Science at the Command Line](https://www.datascienceatthecommandline.com/) - if you like the shell so much that you'd like to do EDA/modelling there :)
 
-
+Thanks for some tips and tricks to [Mark Cowan](https://hackology.co.uk/) who can actually script in Bash, rather
+than throwing together trivial utilities like me.
 
