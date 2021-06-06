@@ -122,7 +122,7 @@ Definining functions in Bash is also straightforward and might be a useful alter
 ```bash
 view_map() {
     open "https://www.google.com/maps/search/$1,$2/"
-}I
+}
 ```
 
 For example the above opens a Google maps browser window in Tallinn with `view_map 59.43 24.74`
@@ -270,9 +270,13 @@ Use `local` to declare local scope variables in a function.
 There are a [few](https://www.thegeekstuff.com/2010/05/bash-shell-special-parameters/), but some useful ones
 
 `$?` - exit status of the last command
+
 `$#` - number of positional arguments for a script
+
 `$$` - process ID
+
 `$_` - absolute path of the shell
+
 `$0` - name of the script
 
 `[[ $? == 0 ]] && echo "Last command succeeded" || echo "Last command failed"`
