@@ -3,9 +3,8 @@ layout: single
 title:  "Bash for Data Science"
 date:   2021-06-02
 categories: peripherals
+comments: true
 ---
-
-## When to use Bash?
 
 As a data professional, chances are you already know Python, one of the most powerful general purpose languages which has libraries to do almost anything conveniently. Why, then, to learn Bash and the Unix shell in general?
 Some of the use cases I've found in my work:
