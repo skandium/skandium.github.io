@@ -98,7 +98,7 @@ author:
   avatar: "/assets/images/profile.jpeg"
   bio: "Staff Data Scientist @ Bolt"
   location: "Tallinn, Estonia"
-  email: "skandium@gmail.com"
+  email:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -278,7 +278,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: # true
       share: true
