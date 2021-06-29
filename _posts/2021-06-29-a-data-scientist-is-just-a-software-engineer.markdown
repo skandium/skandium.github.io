@@ -41,7 +41,7 @@ architectures in PyTorch. In reality, this Research will form a small part of th
 data scientist/machine learning engineer). Most likely, this expectation mismatch is driven by the momentum of academia,
 which rewards novelty over impact, in clear opposition to industry.
 
-## The Data Analyst
+## The Analyst
 
 A data analyst is a necessary workhorse in a technology company. They typically keep a finger on the business pulse,
 supporting decision making with visualisation tools, automated reports, ad hoc analyses, domain knowledge and more. Many
@@ -49,7 +49,7 @@ data analysts I know have similar skills to data scientists: they are not unfami
 statistical methods. The main difference drives from expectations for the roles: an Analyst's output is what we can
 call *knowledge*, while a data scientist mainly produces software (more on this below).
 
-## The Software Engineer
+## The Engineer
 
 A software engineer's role is relatively better established thanks to its longer history. In general, less expectations
 are set on the Engineer compared to the Wizard, as good managers understand big changes are the result of incremental
@@ -96,7 +96,7 @@ before. At Bolt, data science design docs are invariably written after implement
 significantly compared to the initial idea.
 
 This phenomenon means that data scientists work much more often with disposable notebooks and scripts to validate quick
-hypotheses - probably where the myth that they can't write proper code comes from. In the terminology of Pragmatic
+hypotheses - probably where the notion that they can't write proper code comes from. In the terminology of Pragmatic
 Programmer, data scientists most often work with [Prototypes](https://blog.codinghorror.com/the-prototype-pitfall/) - a
 necessity for experimental features.
 
