@@ -84,7 +84,7 @@ with similar quality across Europe. In addition, cultural factors which are not 
 affect both the road network and cycling convenience probably exist.
 
 ### Spatial weighting
-https://mlumiste.com/
+
 A possible caveat of the above approach is the topology of the city. Theoretically, there could be many recreational
 bike roads near the outskirts of the city where space is abundant, but nothing in the city centre. This would not
 facilitate cycling as a viable mean of transportation. For this reason, I apply exponential decay weights to the road
