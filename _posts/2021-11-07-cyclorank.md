@@ -182,7 +182,7 @@ Full results can be found [here](https://mlumiste.com/cyclorank), including the 
 
 ### Discussion
 
-![map](https://images-for-web-s3.s3.eu-central-1.amazonaws.com/map.png)
+![map](https://images-for-web-s3.s3.eu-central-1.amazonaws.com/cyclorank_map.png)
 
 Here point size is proportional to the cycling road share. The map shows that at least bad weather seems to have little
 (or even inverse) correlation to cycling infrastructure :)
