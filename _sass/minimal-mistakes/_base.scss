@@ -126,7 +126,11 @@ blockquote {
 /* links */
 
 a {
-  &:focus {
+  &:link {
+    text-decoration: none;
+  }
+
+    &:focus {
     @extend %tab-focus;
   }
 
@@ -158,6 +162,7 @@ pre {
 
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
+  background: $code-block-background-color;
 }
 
 p > code,
