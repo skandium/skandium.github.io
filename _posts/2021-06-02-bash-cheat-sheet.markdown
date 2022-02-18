@@ -1,8 +1,9 @@
 ---
 layout: single
-title:  "Bash for Data Science"
+classes: narrow
+title:  "Bash for data science"
 date:   2021-06-02
-categories: peripherals
+categories: datascience
 comments: true
 ---
 

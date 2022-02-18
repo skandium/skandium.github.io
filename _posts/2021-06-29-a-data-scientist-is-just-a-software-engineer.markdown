@@ -1,3 +1,12 @@
+---
+layout: single
+classes: narrow
+title:  "A data scientist is just a software engineer"
+date:   2021-06-29
+categories: datascience
+comments: true
+---
+
 ![header](https://image.slidesharecdn.com/fsdl-berkeley-lecture11-deployment-and-monitoring-210412162411/95/lecture-11-ml-deployment-monitoring-full-stack-deep-learning-spring-2021-3-638.jpg?cb=1618244664)
 
 This might be a provocative title for both data scientists and software engineers. An experienced backend developer

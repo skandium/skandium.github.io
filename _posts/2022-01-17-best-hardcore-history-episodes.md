@@ -1,7 +1,7 @@
 ---
 layout: single
-classes: wide
-title:  "Best Hardcore History Episodes"
+classes: narrow
+title:  "Best Hardcore History episodes"
 date:   2022-01-22
 categories: general
 comments: true
