@@ -52,6 +52,7 @@ If we assume the perfect case where all 6 naus make it home that year, and using
 Finally, to estimate how much this foreign trade helped the GDP per capita growth in Portugal, rather than just the king's personal budget, I refer to [real economists](https://academic.oup.com/ereh/article/19/1/1/2754564?login=false#137415272) who link roughly a fifth of GDP to the empire. But already the fact that you'd need a complicated model to estimate this shows that the spice trade was in no way a silver bullet raising Portugal's wealth far above it's neighbours, as plotting the GDP per capita growth against a few European countries clearly shows:
 
 ![gdp countries](https://images-for-web-s3.s3.eu-central-1.amazonaws.com/gdp_countries.png)
+*Based on [Madisson](https://en.wikipedia.org/wiki/List_of_regions_by_past_GDP_(PPP)_per_capita)*
 
 ### Downfall
 
