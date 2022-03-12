@@ -23,7 +23,7 @@ It's well known that the Age of Exploration was mostly driven by the need to fin
 This made me wonder about how valuable the spice trade actually was, especially when put into the context of today's consumer goods and corporations. 
 
 ![azulejo](https://images-for-web-s3.s3.eu-central-1.amazonaws.com/azulejo.jpg)
-*A caravel themed Azulejo tile I bought*
+*A nau (the bulkier cousin of a caravel) themed Azulejo tile I bought*
 
 ### Peppercorns to iPhones
 
