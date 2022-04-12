@@ -7,7 +7,7 @@ categories: datascience
 comments: true
 ---
 
-I believe the edge of gradient boosted tree models (GBT) over NN as the go-to tool for tabular data has eroded over the past few years. This is largely driven by more clever generic embedding methods that can be applied to arbitrary feature inputs, rather than more complex architectures such as transformers. I validate two simple one hot encoding based embeddings that reach parity with GBT on a non trivial spatial problem.
+I believe the edge of gradient boosted tree models (GBT) over neural networks as the go-to tool for tabular data has eroded over the past few years. This is largely driven by more clever generic embedding methods that can be applied to arbitrary feature inputs, rather than more complex architectures such as transformers. I validate two simple one hot encoding based embeddings that reach parity with GBT on a non trivial spatial problem.
 
 ## GBT vs DL
 
@@ -17,7 +17,7 @@ Why should we care?
 
 While the GBT vs DL debate can become emotionally loaded at times, there are some objective benefits to the latter approach:
 
-* Seamless online learning. As we generally train deep learning models using minibatches, it is straightforward to extend this to learning continuously on new data, without requiring a full retraining. GBTs cannot fully replicate this, as they are building an increasingly complex additive function. In order to update it, you'd have to either prune the function somehow (e.g. keep only first N trees and add new ones) or keep the tree structure and only update leaf values. Neither can guarantee optimality, while as a neural network is simply a collection of weight layers, you can fine-tune the whole model.
+* Seamless online learning. As we generally train deep learning models using minibatches, it is straightforward to extend this to learning continuously on new data, without requiring a full retraining. GBTs cannot fully replicate this, as they are building an increasingly complex additive function. In order to update it, you'd have to either prune the function somehow (e.g. keep only first N trees and add new ones) or keep the tree structure and only update leaf values. Neither can guarantee optimality, while as a neural network is simply a collection of differentiable stacked weight layers, you can fine-tune the whole model.
 * Transferability. Closely related to the last point, it means we can reuse a learned model structure and use it for other tasks, or predict multiple things jointly.
 * Multimodal inputs. You had a tabular problem? But what if you can use some image data or free form text to improve the accuracy? DL allows to train these kinds of models jointly end to end. That's much more elegant than combining multiple models (with different APIs) for the same task.
 
@@ -52,7 +52,7 @@ memory usage: 122.4+ MB
 
 ## Basic setup
 
-The regression models are trained for MAE, using early stopping..
+The regression models are trained for MAE, using early stopping. For the neural networks, learning rate reduction on reaching a plateau is applied. The holdout test set is split by timestamp, to avoid unexpected leakage.
 
 
 ## Models
@@ -75,8 +75,6 @@ model = lgb.train(params,
 ```
 
 where X_train is the DataFrame with the 4 coordinate columns. No feature engineering, no standardization or scaling, nor discretization is needed to get started! This is the closest you can come to not knowing anything about machine learning, but being able to train a model. We often (half-)joke with colleagues that the relative ease of using powerful libraries such as LightGBM has made the theory behind data science redundant.
-
-To get the best model, I train with a large number of estimators and apply early stopping, measuring various metric performance on a holdout test set (split by timestamp, to avoid unexpected leakage).
 
 ## Neural networks
 
@@ -129,7 +127,7 @@ I'll reuse the same feedforward layer throughout different models.
 ### MLP on raw features
 
 First, to prove what is probably obvious to people with DL experience, you can't simply pass the complex numeric features into a fully connected layer.
-We'll try with the following model, that passes the inputs directly to `self.feedforward_layer`. 
+We'll try with the following model, that passes the inputs directly to `self.feedforward_layer`. While MLPs are in theory universal function approximators, it's inefficient to force them to learn the relevant "splits" from scalar inputs.
 
 ```python
 class MLPModel(KerasModel):
@@ -160,7 +158,7 @@ class MLPModel(KerasModel):
 
 ### Embedding quantile bins
 
-While MLP is in theory a universal function approximator, we can significantly help the model learn by discretizing the input data. A clever trick from [4] is to notice that a trained tree model can be expressed as a simple neural network where the inputs are one hot encoded according to which split in the sorted list of splits they fall into, the first layer of weights represents the connectivity of splits and terminal leaves, and the final output is simply the binary activation of one leaf node. Inspired by this, they propose to discretize the numeric features into bins based on quantiles, one hot encode these and only then pass to fully connected layers. I try this with the coordinate data - calculating the quantile threshold on the training set and applying one hot encoding based on them to the whole dataset.
+We can significantly help the model learn by discretizing the input data. A clever trick from [4] is to notice that a trained tree model can be expressed as a simple neural network where the inputs are one hot encoded according to which split in the sorted list of splits they fall into, the first layer of weights represents the connectivity of splits and terminal leaves, and the final output is simply the binary activation of one leaf node. Inspired by this, they propose to discretize the numeric features into bins based on quantiles, one hot encode these and only then pass to fully connected layers. I try this with the coordinate data - calculating the quantile threshold on the training set and applying one hot encoding based on them to the whole dataset.
 
 Note that here all 4 coordinate inputs are embedded separately - implicitly we are assuming that the feedforward layer in the end is powerful enough to learn interaction effects from the concatenated embeddings vector. 
 
@@ -286,7 +284,7 @@ class EmbeddedH3Model(KerasModel):
 
 ### Advanced embeddings
 
-There is a shortcoming of the embedded quantile bins method: it loses all information on the order of values. While this might not matter too much for our use case - coordinate range is not related to the target monotonically - it can help with more traditional numeric features, where you'd like to model both the ordinal properties, but also enable bin-level differences. Additionally, one hot encoding is the least parameter efficient representation of the input features, needing a separate vector to represent each quantized bin.
+There is a shortcoming of the embedded quantile bins method: it loses all information on the order of values. While this might not matter too much for our use case - coordinate range is not related to the target monotonically - it can help with more traditional numeric features, where you'd like to model both the ordinal properties, but also enable bin-level differences. 
 
 An elegant solution I discovered from [2] is to instead apply a *piecewise linear* encoding, which works as follows: if you have 5 equal-width bins over a range from 0 to 10, i.e. [0, 2), [2, 4), [4, 6), [6, 8), [8, 10], then for an input value of 7, you encode it as [1, 1, 1, 0.5, 0] instead of [0, 0, 0, 1, 0] (the one hot encoding). This is order-preserving.
 
