@@ -44,7 +44,7 @@ Intuitively there are a few different data sources for predicting the speed on a
 
 The current state of traffic is provided by the car counter data. If we view this as a regular multivariate time series, we get a $k \times t$ matrix $C$ where $k$ is the number of counters and $t$ the number of observations. The main innovation we deployed was reducing this matrix to the first $p$ principal components and using those as time series features directly. Intuitively, this provides a compressed form of "traffic". We confirm that this is the case by visualising the first two principal components grouped by time in week - they are clearly separable. Note that unlike the winning team, we did not use any external lookup approaches to retrieve exact temporal features, so the principal components are the only proxy for time that our model has.
 
-![pca](https://github.com/skandium/skandium.github.io/tree/master/assets/images/pca.png)
+![pca](https://images-for-web-s3.s3.eu-central-1.amazonaws.com/pca.PNG)
 
 To encode current "nearby" traffic, we tried a somewhat heuristic approach: weighting the counter matrix $C$ with a row-normalised symmetric weight matrix. More details can be found in our [paper](https://arxiv.org/pdf/2211.00157.pdf) but intuitively, this generates a feature which is the distance-weighted mean of nearby counters. This can also be thought of as a hardcoded proxy for a graph convolution layer.
 
