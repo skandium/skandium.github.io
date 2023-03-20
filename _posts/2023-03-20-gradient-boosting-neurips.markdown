@@ -54,7 +54,7 @@ The best thing about gradient boosting is that you can throw in lat/lng coordina
 
 We used LightGBM as our library of choice, because we're familiar with it and experiments with Catboost or XGBoost seemed to take 5-10x longer for standard hyperparameters. We employ two tricks for optimising LGB performance: by using the _init_score_ argument with target encoded features, we significantly reduce training time, as the model can start from a much more accurate base weak learner. We increase the complexity hyperparameter _num_leaves_ to unintuitively high levels like 5k or 10k, in practice on our large dataset this seems to converge faster but not hurt holdout accuracy.
 
-Computationally, our solution for extended track could be run on a 32GB Macbook, and for the core track training models end to end on a larger server took just a few hours. The trained models take <100MB on disk.
+Computationally, our solution for extended track could be run on a 32GB Macbook, and for the core track training models end to end on a larger server took just a few hours. The trained models take <100MB on disk. The code can be found on [GitHub](https://github.com/skandium/t4c22) and the paper on [arXiv](https://arxiv.org/abs/2211.00157).
 
 ## Results
 
