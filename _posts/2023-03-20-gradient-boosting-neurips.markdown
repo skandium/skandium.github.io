@@ -58,7 +58,7 @@ Computationally, our solution for extended track could be run on a 32GB Macbook,
 
 ## Results
 
-Let's have a look at the final results of core track (with about 10x more data than extended, so arguably harder for GBM approaches).
+Let's have a look at the top final results of core track (with about 10x more data than extended, so arguably harder for GBM approaches).
 
 | **Team**     | **Approach** | **Library** | **Secret Sauce**                           | **Score** |
 |--------------|--------------|-------------|--------------------------------------------|-----------|
