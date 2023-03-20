@@ -8,7 +8,7 @@ comments: true
 ---
 
 This is a long overdue summary of our experience from the NeurIPS 2022 [Traffic4cast](https://www.iarai.ac.at/traffic4cast/challenge/) (t4c22) competition.
-Together with co-author [Andrei Ilie](https://www.linkedin.com/in/catalin-andrei-ilie-848458104/) managed to grab a second place in the main track and a (close) 4th place in the extended one. Taking into account that this was my second ML competition since 2017, that Andrei had just recently had a baby and was operating on 3 hours of sleep and that we messed up the competition deadline and lost the last day of work, I'm very happy with the result overall. We spent about two months on the competition, with the last two weeks being an especially hackathon-esque slugfest. 
+Together with co-author [Andrei Ilie](https://www.linkedin.com/in/catalin-andrei-ilie-848458104/) we managed to grab a second place in the main track and a (close) 4th place in the extended one. Taking into account that this was my second ML competition since 2017, that Andrei had just recently had a baby and was operating on 3 hours of sleep and that we messed up the competition deadline and lost the last day of work, I'm very happy with the result overall. We spent about two months on the competition, with the last two weeks being an especially hackathon-esque slugfest. 
 
 ## Competition setup
 
@@ -95,7 +95,7 @@ _Model stacking: Ensembling technique where ML model predictions made on K holdo
 If you're curious, here is what we did for 1: In addition to the historical travel time on road segment (classic target encoding), it's good to take into account also what was the travel time, _conditional_ on the city's overall traffic. You can think of it as categorising overall vehicle counters into two $state$ buckets: $["low", "high"]$ and then calculating a separate target-encoded feature for each. Since we want to predict the congestion class, we'll get features such as e.g. $proba_{e, green, low} = \mathbb{E} [ \frac{count_{e, green, low}}{count_{e, total, low}}]$ for each edge $e$, where the expectation is taken over training set.
 
 
-But there is a risk of leakage here. Since the label data was also sparse (in the next 15 minutes, you will only observe true values for edges that saw cars on them), it might be that we have edges with very few samples in the historical data, and any target encoding starts leaking signal. To combat that, we replace $proba_{e, class, state}$ with the median probabilities taken over _all_ sparse edges, so that a high capacity model such a LGB cannot infer the signal directly.
+But there is a risk of leakage here. Since the label data was also sparse (in the next 15 minutes, you will only observe true values for edges that saw cars on them), it might be that we have edges with very few samples in the historical data, and any target encoding starts leaking signal. To combat that, for sparse edges we replace $proba_{e, class, state}$ with the median probabilities taken over _all_ sparse edges, so that a high capacity model such a LGB cannot infer the signal directly.
 
 For the extended track where the data was predicting supersegments, we had no sparsity problem, so of course, there's no reason to stop at just 2 traffic state categories. We experimented with 10, 30, even 50, and the accuracy kept increasing!  But this represents exactly the kind of try-hard crazy feature engineering that you wouldn't see in most real life projects!
 
