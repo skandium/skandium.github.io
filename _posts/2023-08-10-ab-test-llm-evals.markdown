@@ -9,7 +9,7 @@ comments: true
 
 ## TL;DR
 
-LLM stochasticity poses a problem to evaluating whether new commits improve its performance or not - the solution is to run a paired difference test on each eval for maximal statistical power.
+LLM stochasticity poses a problem to evaluating whether new commits improve a project's performance or not - the solution is to run a paired difference test on repeated measures of the same eval set for maximal statistical power.
 
 ## Introduction
 
