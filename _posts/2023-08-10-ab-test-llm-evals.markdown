@@ -235,7 +235,7 @@ Reusing Marco Laube's notation - if our model is given by
 
 $$y_{ijk} = \beta_{0} + \beta_{1} \mathbf{1}_{j=2} + u_{i} + \epsilon_{ijk} $$
 
-where $t$ denotes treatment in $\{1,2\}$ and $k$ is the number of repeated measurements we have per each group (below example uses $k=2$ and $n=2$ to exemplify), we can write:
+where $j$ denotes treatment in $\{1,2\}$ and $k$ is the number of repeated measurements we have per each group (below example uses $k=2$ and $n=2$ to exemplify), we can write:
 
 $$
  \begin{bmatrix}
