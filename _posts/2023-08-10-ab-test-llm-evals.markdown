@@ -3,7 +3,7 @@ layout: single
 classes: wide
 title:  "Why you should A/B test your LLM evals"
 date:   2023-08-10
-categories: datascience
+categories: technical
 comments: true
 ---
 

@@ -3,7 +3,7 @@ layout: single
 classes: wide
 title:  "How gradient boosting almost won a NeurIPS competition"
 date:   2023-03-20
-categories: datascience
+categories: technical
 comments: true
 ---
 

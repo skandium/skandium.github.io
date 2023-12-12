@@ -3,7 +3,7 @@ layout: single
 classes: narrow
 title:  "Bash for data science"
 date:   2021-06-02
-categories: datascience
+categories: technical
 comments: true
 ---
 

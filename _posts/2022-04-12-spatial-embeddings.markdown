@@ -3,7 +3,7 @@ layout: single
 classes: narrow
 title:  "Effective spatial embeddings for tabular data"
 date:   2022-04-12
-categories: datascience
+categories: technical
 comments: true
 ---
 

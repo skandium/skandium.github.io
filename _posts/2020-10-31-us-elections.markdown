@@ -2,7 +2,7 @@
 layout: single
 title:  "US elections 2020"
 date:   2020-10-31
-categories: projects
+categories: general
 ---
 
 They say that finding strong correlations is hard in social sciences...

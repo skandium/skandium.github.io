@@ -3,7 +3,7 @@ layout: single
 classes: narrow
 title:  "Quarterly planning is a noisy optimisation problem"
 date:   2023-12-05
-categories: datascience
+categories: general
 comments: false
 ---
 

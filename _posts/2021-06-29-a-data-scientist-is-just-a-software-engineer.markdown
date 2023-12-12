@@ -3,7 +3,7 @@ layout: single
 classes: narrow
 title:  "A data scientist is just a software engineer"
 date:   2021-06-29
-categories: datascience
+categories: general
 comments: true
 ---
 
