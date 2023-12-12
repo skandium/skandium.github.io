@@ -127,3 +127,5 @@ The final takeaway is simple: if you want to publish, you will be mostly disappo
 cutting edge engineering, then a startup will work if their product is ML-first. Be sure to ask in interviews how critical
 is the ML solution to the company, if it falls into the nice-to-have category, it'll likely not have a SotA solution. Otherwise,
 the amount of interesting ML engineering work scales with the size of the company.
+
+[Code for simulations](https://colab.research.google.com/drive/176TEdqYTOVTNzjhZ2YOTIhedFXQy6lBN?usp=drive_link)
