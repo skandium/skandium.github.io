@@ -137,9 +137,6 @@ footer:
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/lumiste.m"
     - label: "Goodreads"
       icon: "fab fa-fw fa-goodreads"
       url: "https://www.goodreads.com/review/list/60069883-martin-lumiste?order=d&sort=review&view=reviews"
