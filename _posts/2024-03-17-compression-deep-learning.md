@@ -7,6 +7,8 @@ categories: technical
 comments: false
 ---
 
+Update: [Discussion on Hacker News](https://news.ycombinator.com/item?id=39736718)
+
 _To see a World in a Grain of Sand_\
 _And a Heaven in a Wild Flower_\
 _Hold Infinity in the palm of your hand_\

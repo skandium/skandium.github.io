@@ -7,6 +7,8 @@ categories: technical
 comments: false
 ---
 
+Update: [Discussion on Hacker News](https://news.ycombinator.com/item?id=42084977)
+
 I’ve been having quite a bit of fun with the fairly recent [LivePortrait](https://github.com/KwaiVGI/LivePortrait) model, generating deepfakes of my friends for some cheap laughs.
 
 ![](/assets/images/compression/elon.gif)
