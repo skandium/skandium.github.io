@@ -1,6 +1,5 @@
 .jekyll-cache
 .DS_Store
-Gemfile.lock
 _site/
 package-lock.json
 .idea/

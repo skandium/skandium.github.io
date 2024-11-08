@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
+gem 'json'
 gem "minimal-mistakes-jekyll"
+
+# gem 'minimal-mistakes-jekyll', '~> 4.26.0'
 
 gem "jekyll-paginate", group: :jekyll_plugins
 gem "jekyll-sitemap", group: :jekyll_plugins
