@@ -1,7 +1,7 @@
 ---
 layout: single
 classes: narrow
-title:  "Animating old family photos for $0.36 each"
+title:  "Potterising old family photos"
 date:   2026-01-18
 categories: technical
 comments: false
