@@ -2,7 +2,7 @@
 layout: single
 classes: narrow
 title:  "Animating old family photos for $0.36 each"
-date:   2026-01-13
+date:   2026-01-18
 categories: technical
 comments: false
 ---
