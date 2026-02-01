@@ -5,6 +5,7 @@ title:  "Compressing images with neural networks"
 date:   2024-03-17
 categories: technical
 comments: false
+description: "An introduction to learned image compression using neural networks."
 ---
 
 Update: [Discussion on Hacker News](https://news.ycombinator.com/item?id=39736718)

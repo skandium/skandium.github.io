@@ -5,6 +5,7 @@ title:  "CycloRank"
 date:   2021-11-07
 categories: projects
 comments: true
+description: "Ranking European cities by cycling infrastructure using crowdsourced OpenStreetMap data."
 ---
 
 I measure and rank the cycling infrastructure of European cities by using crowdsourced data from OpenStreetMap. The

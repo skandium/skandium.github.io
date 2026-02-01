@@ -5,6 +5,7 @@ title:  "ML research and startups"
 date:   2023-12-12
 categories: general
 comments: false
+description: "What to expect from machine learning research roles in industry versus academia."
 ---
 
 Machine learning is a field heavily tied to science. Even when normalising on years of experience, the share of engineers with a PhD and prior publications is much larger in ML compared to

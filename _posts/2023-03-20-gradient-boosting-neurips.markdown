@@ -5,6 +5,7 @@ title:  "How gradient boosting almost won a NeurIPS competition"
 date:   2023-03-20
 categories: technical
 comments: true
+description: "Our second place finish in the NeurIPS 2022 Traffic4cast competition using gradient boosting."
 ---
 
 This is a long overdue summary of our experience from the NeurIPS 2022 [Traffic4cast](https://www.iarai.ac.at/traffic4cast/challenge/) (t4c22) competition.

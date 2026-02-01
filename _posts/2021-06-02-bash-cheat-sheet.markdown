@@ -5,6 +5,7 @@ title:  "Bash for data science"
 date:   2021-06-02
 categories: technical
 comments: true
+description: "A practical guide to Bash and Unix shell commands for data professionals."
 ---
 
 As a data professional, chances are you already know Python, one of the most powerful general purpose languages which has libraries to do almost anything conveniently. Why, then, to learn Bash and the Unix shell in general?

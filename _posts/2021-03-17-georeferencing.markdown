@@ -3,6 +3,7 @@ layout: single
 title:  "Georeferencing images like a caveman"
 date:   2021-03-17
 categories: projects
+description: "Overlaying historical maps on modern digital maps from scratch, without proprietary software."
 ---
 
 I've been intrigued by local history and urban development for as long as I can remember. A natural exercise for those who share

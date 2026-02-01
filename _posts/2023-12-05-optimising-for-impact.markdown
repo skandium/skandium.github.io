@@ -5,6 +5,7 @@ title:  "Quarterly planning is a noisy optimisation problem"
 date:   2023-12-05
 categories: general
 comments: false
+description: "Lessons on maximising impact as an individual contributor in large product organisations."
 ---
 
 ![excel](/assets/images/excel.avif)

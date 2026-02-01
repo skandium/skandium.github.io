@@ -6,3 +6,5 @@ main:
      url: /
    - title: "Content"
      url: /content
+   - title: "Trivia"
+     url: /trivia

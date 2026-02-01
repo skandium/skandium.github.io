@@ -5,6 +5,7 @@ title:  "No, NATO is not responsible for the Ukrainian War"
 date:   2022-03-20
 categories: general
 comments: true
+description: "Examining the argument that NATO expansion caused Russia's invasion of Ukraine."
 ---
 
 Recently I've read the argument that NATO is (partly) to blame for the Russian invasion of Ukraine due to its eastward expansion damaging Russia's vital interests, including from some Western journalists like this piece in the [The Guardian](https://www.theguardian.com/commentisfree/2022/feb/28/nato-expansion-war-russia-ukraine) or this in [The New York Times](https://www.nytimes.com/2022/02/21/opinion/putin-ukraine-nato.html).

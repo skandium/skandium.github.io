@@ -5,6 +5,7 @@ title:  "Why you should A/B test your LLM evals"
 date:   2023-08-10
 categories: technical
 comments: true
+description: "Using paired difference tests to handle LLM stochasticity when evaluating model improvements."
 ---
 
 ## TL;DR

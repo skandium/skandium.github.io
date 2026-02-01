@@ -3,6 +3,7 @@ layout: single
 title:  "Proximal policy optimization in Keras"
 date:   2019-08-22
 categories: projects
+description: "Implementation of PPO reinforcement learning algorithm in Keras for solving CartPole."
 ---
 
 ![us_elections](/assets/images/cartpole.png)

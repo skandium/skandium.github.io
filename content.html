@@ -1,19 +1,24 @@
 ---
 layout: archive
 author_profile: false
+title: "Content"
+description: "Blog posts and articles by Martin Lumiste on machine learning, data science, and technology."
 ---
 
-{% for post in site.posts %}
-        <a href="{{ post.url }}"> {{ post.title }} ({{ post.date | date: "%Y-%m-%d" }}) </a>
+{% assign category_order = "technical,general,projects" | split: "," %}
+{% assign category_titles = "Technical,Musings,Projects" | split: "," %}
+
+{% for cat in category_order %}
+{% assign cat_index = forloop.index0 %}
+<h3>{{ category_titles[cat_index] }}</h3>
+{% for post in site.categories[cat] %}
+        <a href="{{ post.url }}"> {{ post.title }} - {{ post.date | date: "%b %-d, %Y" }} </a>
         <br>
 {% endfor %}
+{% endfor %}
 
-<a href="https://medium.com/swlh/data-driven-decision-making-meh-517b60ad5d3f">Data driven decision making? Meh (2020-06-30)</a><br>
-<a href="https://proekspert.com/blog/data-analytics/will-robots-take-your-job/">Will robots take your job? (2016-12-13)</a><br>
-
-<p>Eesti keeles:</p>
-<a href="https://open.spotify.com/episode/1I5V87zmmuQovq3hpvydpu?si=ec3252a236114796">Siim Maivel Taskuhääling osa 10 (2023-08-26)</a><br>
-<a href="https://edasi.org/183721/tehisintellekti-mojudest-tooturule-martin-lumiste-mida-teha-kui-ai-teeb-koike/">Mida teha, kui AI teeb kõike? (2023-04-06)</a><br>
-<a href="https://digipro.geenius.ee/raadiosaade/algorytm/13-01-algorutm-martin-teab-kunas-takso-tuleb/">Algorütm: Martin teab, kunas takso tuleb (2022-01-13)</a><br>
-<a href="https://arvamus.postimees.ee/3219055/martin-lumiste-miks-pagulasprobleem-ei-ole-kooseluseadus-2-0">Miks pagulasprobleem ei ole kooseluseadus 2.0 (2015-06-09)</a><br>
-
+<h3>Eesti keeles</h3>
+<a href="https://open.spotify.com/episode/1I5V87zmmuQovq3hpvydpu?si=ec3252a236114796">Siim Maivel Taskuhääling osa 10 - August 26, 2023</a><br>
+<a href="https://edasi.org/183721/tehisintellekti-mojudest-tooturule-martin-lumiste-mida-teha-kui-ai-teeb-koike/">Mida teha, kui AI teeb kõike? - April 6, 2023</a><br>
+<a href="https://digipro.geenius.ee/raadiosaade/algorytm/13-01-algorutm-martin-teab-kunas-takso-tuleb/">Algorütm: Martin teab, kunas takso tuleb - January 13, 2022</a><br>
+<a href="https://arvamus.postimees.ee/3219055/martin-lumiste-miks-pagulasprobleem-ei-ole-kooseluseadus-2-0">Miks pagulasprobleem ei ole kooseluseadus 2.0 - June 9, 2015</a><br>

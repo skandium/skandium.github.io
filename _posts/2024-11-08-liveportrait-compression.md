@@ -5,6 +5,7 @@ title:  "Perceptually lossless (talking head) video compression at 22kbit/s"
 date:   2024-11-07
 categories: technical
 comments: false
+description: "Achieving extreme video compression rates using the LivePortrait model for talking head videos."
 ---
 
 Update: [Discussion on Hacker News](https://news.ycombinator.com/item?id=42084977)

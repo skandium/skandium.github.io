@@ -5,6 +5,7 @@ title:  "Age of exploration startups"
 date:   2022-03-12
 categories: general
 comments: true
+description: "How ordinary groceries drove the Age of Exploration, big business, and war."
 ---
 
 How ordinary groceries drove exploration, big business and war

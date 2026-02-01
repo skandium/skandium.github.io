@@ -1,0 +1,123 @@
+---
+layout: archive
+author_profile: false
+title: "Trivia"
+description: "A collection of interesting facts curated by Martin Lumiste."
+---
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div id="trivia-layout" style="display: flex; gap: 2.5em;">
+  <div style="flex: 1; max-width: 700px;">
+    <div id="random-fact" style="padding: 1.5em 2em; margin-bottom: 1.5em; border-left: 4px solid #494e52; border-radius: 0 4px 4px 0;">
+      <h3 id="fact-title" style="margin: 0 0 0.5em 0; font-size: 1.1em; color: #8e8e8e;"></h3>
+      <p id="fact-content" style="margin: 0; line-height: 1.6; color: #ffffff;"></p>
+      <p id="fact-source" style="margin: 0.8em 0 0 0; font-size: 0.8em; color: #676d72;"></p>
+    </div>
+    <button id="trivia-btn" onclick="showRandomFact()" style="display: inline-block; padding: 0.5em 1.2em; background: #494e52; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85em; letter-spacing: 0.02em;">Another fact &#8635;</button>
+  </div>
+
+  <div style="width: 200px; flex-shrink: 0;">
+    <h4 style="margin-top: 0; color: #676d72; font-size: 0.95em; text-transform: uppercase; letter-spacing: 0.05em;">All facts</h4>
+    <ul id="fact-list" style="list-style: none; padding: 0; margin: 0;"></ul>
+  </div>
+</div>
+
+<script>
+const facts = [
+  {
+    title: "An unlikely empress",
+    content: "After the death of his favourite wife Poppea Sabina, emperor Nero castrated and married a young slave named Sporus (Greek for 'semen') who resembled her. After Nero's suicide, Sporus was passed on as a trophy between subsequent rulers Nymphidius Sabinus and Otho.",
+    source: { text: "Pax by Tom Holland", url: "https://www.goodreads.com/book/show/62712920", icon: "fa-solid fa-book" }
+  },
+  {
+    title: "Charlemagne's tablecloth",
+    content: "According to legend, Charlemagne had a tablecloth spun from asbestos that he would, as a party trick, throw into the fire without it being harmed.",
+    source: { text: "No More Tears by Gardiner Harris", url: "https://www.goodreads.com/book/show/216247552", icon: "fa-solid fa-book" }
+  },
+  {
+    title: "A primer on geopolitics",
+    content: "During the Potsdam Conference, upon hearing Winston Churchill object to a certain policy regarding Poland and saying that the Pope would be very displeased, Stalin reportedly turned to Churchill and asked: 'How many divisions did you say the Pope has?'",
+    source: { text: "Diary entry of Assistant Press Secretary Eban Ayers", url: "https://www.cia.gov/readingroom/docs/1946-01-24.pdf", icon: "fa-solid fa-scroll"}
+  },
+  {
+    title: "Dick's demise",
+    content: "In the first half of the 19th century, the fastest way to send messages was via horse. This created an opportunity for a railroad station robber called Fiddler Dick, who together with his gang would jump with their loot onto a departing train on the last moment, making a risk-free getaway. This business model was disrupted in 1844, when a policeman used the nascent electric telegraph to signal his description ahead to the next station, resulting in Dick's capture.",
+    source: { text: "The Victorian Internet by Tom Standage", url: "https://www.goodreads.com/book/show/52853", icon: "fa-solid fa-book"}
+  },
+  {
+    title: "The horrors of progress",
+    content: "In the spirit of an ultra-conservative dictator and a true reactionary, Portugal's António Salazar is said to have responded to the discovery of oil in the Portuguese colony of Angola: 'Oh, what a pity!'  ",
+    source: { text: "Portugal: Football, Fado, and Fascism? by The Rest is History", url: "https://www.youtube.com/watch?v=8WU3RmbEurg", icon: "fa-solid fa-headphones"}
+  },
+  {
+    title: "Ford's morality police",
+    content: "The Ford Motor Company had a Sociology Department, that would organise unannounced home visits, monitoring the employees' cleanliness, spending and drinking habits, marital status and language skills. Offending employees had their pay cut or were fired.",
+    source: { text: "The People's Tycoon by Steven Watts", url: "https://www.goodreads.com/book/show/12378", icon: "fa-solid fa-book"}
+  },
+  {
+    title: "Bourgeois revolutionary",
+    content: "For most of 1900–1917, radical socialist revolutionary Vladimir Lenin lived as a political exile in comfortable Western European cities like Zurich, Geneva, Paris, and London. He spent his days frequenting libraries, cafés, and reading rooms, writing revolutionary theory while moving freely across borders with little paperwork. He lived modestly but securely, largely thanks to remittances from his mother managing the family estate in Russia.",
+    source: {text: "Lenin the Dictator by Victor Sebestyen", url: "https://www.goodreads.com/book/show/34203157", icon: "fa-solid fa-book"}
+  },
+  {
+    title: "Moody Mark",
+    content: "Mark Zuckerberg has a strict policy of not joining meetings before noon. In 2015, this derailed a meeting scheduled for 12:30 P.M. with the president of Colombia, which later caused the collapse of their support for Zuckerberg's Internet.org initative.",
+    source: {text: "Careless People by Sarah Wynn-Williams", url: "https://www.goodreads.com/book/show/223436601-careless-people", icon: "fa-solid fa-book"}
+  }
+];
+
+function showRandomFact() {
+  const index = Math.floor(Math.random() * facts.length);
+  showFact(index);
+}
+
+function showFact(index) {
+  const fact = facts[index];
+  document.getElementById('fact-title').textContent = fact.title;
+  document.getElementById('fact-content').textContent = fact.content;
+  const sourceEl = document.getElementById('fact-source');
+  if (fact.source) {
+    const icon = fact.source.icon || 'fa-solid fa-book';
+    if (fact.source.url) {
+      sourceEl.innerHTML = '<a href="' + fact.source.url + '" target="_blank" style="color: #676d72; text-decoration: none;"><i class="' + icon + '" style="margin-right: 0.4em;"></i>' + fact.source.text + '</a>';
+    } else {
+      sourceEl.innerHTML = '<i class="' + icon + '" style="margin-right: 0.4em;"></i>' + fact.source.text;
+    }
+  } else {
+    sourceEl.textContent = '';
+  }
+  document.querySelectorAll('#fact-list li').forEach((li, i) => {
+    const link = li.querySelector('a');
+    if (i === index) {
+      li.dataset.active = '1';
+      link.style.fontWeight = '600';
+      link.style.borderBottomColor = '#494e52';
+    } else {
+      delete li.dataset.active;
+      link.style.fontWeight = 'normal';
+      link.style.borderBottomColor = 'transparent';
+    }
+  });
+}
+
+function renderFactList() {
+  const list = document.getElementById('fact-list');
+  facts.forEach((fact, index) => {
+    const li = document.createElement('li');
+    li.style.marginBottom = '0.5em';
+    const link = document.createElement('a');
+    link.href = '#';
+    link.textContent = fact.title;
+    link.style.cssText = 'color: #8e8e8e; text-decoration: none; font-size: 0.9em; border-bottom: 1px solid transparent;';
+    link.onmouseover = () => { link.style.borderBottomColor = '#494e52'; };
+    link.onmouseout = () => { if (!li.dataset.active) link.style.borderBottomColor = 'transparent'; };
+    link.onclick = (e) => { e.preventDefault(); showFact(index); };
+    li.appendChild(link);
+    list.appendChild(li);
+  });
+}
+
+showRandomFact();
+renderFactList();
+</script>

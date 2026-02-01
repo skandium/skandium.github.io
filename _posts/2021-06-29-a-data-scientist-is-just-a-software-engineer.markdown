@@ -5,6 +5,7 @@ title:  "A data scientist is just a software engineer"
 date:   2021-06-29
 categories: general
 comments: true
+description: "On the convergence of data science and software engineering roles in modern tech organisations."
 ---
 
 ![header](https://image.slidesharecdn.com/fsdl-berkeley-lecture11-deployment-and-monitoring-210412162411/95/lecture-11-ml-deployment-monitoring-full-stack-deep-learning-spring-2021-3-638.jpg?cb=1618244664)

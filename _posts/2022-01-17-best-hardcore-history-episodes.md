@@ -5,6 +5,7 @@ title:  "Best Hardcore History episodes"
 date:   2022-01-22
 categories: general
 comments: true
+description: "A curated ranking of Dan Carlin's Hardcore History podcast episodes."
 ---
 
 ## Ode to Hardcore History

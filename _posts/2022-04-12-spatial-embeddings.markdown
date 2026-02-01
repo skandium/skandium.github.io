@@ -5,6 +5,7 @@ title:  "Effective spatial embeddings for tabular data"
 date:   2022-04-12
 categories: technical
 comments: true
+description: "Comparing neural network embeddings with gradient boosted trees on spatial tabular data problems."
 ---
 
 I believe the edge of gradient boosted tree models (GBT) over neural networks as the go-to tool for tabular data has eroded over the past few years. This is largely driven by more clever generic embedding methods that can be applied to arbitrary feature inputs, rather than more complex architectures such as transformers. I validate two simple one hot encoding based embeddings that reach parity with GBT on a non trivial spatial problem.

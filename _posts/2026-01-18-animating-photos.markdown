@@ -5,6 +5,7 @@ title:  "Potterising old family photos"
 date:   2026-01-18
 categories: technical
 comments: false
+description: "Using AI models to animate old family photographs with Harry Potter-style moving pictures."
 ---
 
 _and a boy in my dormitory said if I develop the film in the right potion, the pictures’ll move._
