@@ -5,16 +5,33 @@ title: "Content"
 description: "Blog posts and articles by Martin Lumiste on machine learning, data science, and technology."
 ---
 
-{% assign category_order = "technical,general,projects" | split: "," %}
-{% assign category_titles = "Technical,Musings,Projects" | split: "," %}
+{% assign pinned_titles = "Compressing images with neural networks,Perceptually lossless (talking head) video compression at 22kbit/s" | split: "," %}
+{% assign category_labels = "technical:Technical,general:Musings,projects:Projects" | split: "," %}
 
-{% for cat in category_order %}
-{% assign cat_index = forloop.index0 %}
-<h3>{{ category_titles[cat_index] }}</h3>
-{% for post in site.categories[cat] %}
-        <a href="{{ post.url }}"> {{ post.title }} - {{ post.date | date: "%b %-d, %Y" }} </a>
-        <br>
+<h3>Pinned</h3>
+{% for post in site.posts %}
+  {% if pinned_titles contains post.title %}
+    {% for label in category_labels %}
+      {% assign parts = label | split: ":" %}
+      {% if post.categories contains parts[0] %}
+        {% assign tag_label = parts[1] %}
+      {% endif %}
+    {% endfor %}
+    <a href="{{ post.url }}">{{ post.title }}</a> <span style="color: #888; font-size: 0.85em;">- {{ post.date | date: "%b %-d, %Y" }} [{{ tag_label }}]</span><br>
+  {% endif %}
 {% endfor %}
+
+<h3>All posts</h3>
+{% for post in site.posts %}
+  {% unless pinned_titles contains post.title %}
+    {% for label in category_labels %}
+      {% assign parts = label | split: ":" %}
+      {% if post.categories contains parts[0] %}
+        {% assign tag_label = parts[1] %}
+      {% endif %}
+    {% endfor %}
+    <a href="{{ post.url }}">{{ post.title }}</a> <span style="color: #888; font-size: 0.85em;">- {{ post.date | date: "%b %-d, %Y" }} [{{ tag_label }}]</span><br>
+  {% endunless %}
 {% endfor %}
 
 <h3>Eesti keeles</h3>

@@ -51,13 +51,13 @@ Given the studies, there are at least three reasons to not stress too much about
 
 ## Sources
 
-[1] [The Science of Mom](https://www.goodreads.com/book/show/25923717-the-science-of-mom), Alice Callahan <br>
-[2] [Cribsheet](https://www.goodreads.com/book/show/40121328-cribsheet), Emily Oster <br>
-[3] [Do pacifiers reduce the risk of sudden infant death syndrome? A meta-analysis](https://pubmed.ncbi.nlm.nih.gov/16216900/) <br>
-[4] [Effectiveness of behavioral sleep interventions on children’s and mothers’ sleep quality and maternal depression: a systematic review and meta-analysis](https://www.nature.com/articles/s41598-022-07762-8) <br>
-[5] [Risks and Benefits of Pacifiers](https://www.aafp.org/pubs/afp/issues/2009/0415/p681.html) <br>
-[6] [Improved Estimates of the Benefits of Breastfeeding Using Sibling Comparisons to Reduce Selection Bias](https://pmc.ncbi.nlm.nih.gov/articles/PMC1361236/) <br>
-[7] [Is Breast Truly Best? Estimating the Effect of Breastfeeding on Long-term Child Wellbeing in the United States Using Sibling Comparisons](https://pmc.ncbi.nlm.nih.gov/articles/PMC4077166/) <br>
-[8] [Breastfeeding and risk of overweight in childhood and beyond: a systematic review with emphasis on sibling-pair and intervention studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC8830309/) <br>
-[9] [Effect of breast feeding on intelligence in children: prospective study, sibling pairs analysis, and meta-analysis ](https://pubmed.ncbi.nlm.nih.gov/17020911/) <br>
-[10] [Breastfeeding during infancy and neurocognitive function in adolescence: 16-year follow-up of the PROBIT cluster-randomized trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC5909901/) <br>
+<span id="ref-1">[1]</span> [The Science of Mom](https://www.goodreads.com/book/show/25923717-the-science-of-mom), Alice Callahan <br>
+<span id="ref-2">[2]</span> [Cribsheet](https://www.goodreads.com/book/show/40121328-cribsheet), Emily Oster <br>
+<span id="ref-3">[3]</span> [Do pacifiers reduce the risk of sudden infant death syndrome? A meta-analysis](https://pubmed.ncbi.nlm.nih.gov/16216900/) <br>
+<span id="ref-4">[4]</span> [Effectiveness of behavioral sleep interventions on children's and mothers' sleep quality and maternal depression: a systematic review and meta-analysis](https://www.nature.com/articles/s41598-022-07762-8) <br>
+<span id="ref-5">[5]</span> [Risks and Benefits of Pacifiers](https://www.aafp.org/pubs/afp/issues/2009/0415/p681.html) <br>
+<span id="ref-6">[6]</span> [Improved Estimates of the Benefits of Breastfeeding Using Sibling Comparisons to Reduce Selection Bias](https://pmc.ncbi.nlm.nih.gov/articles/PMC1361236/) <br>
+<span id="ref-7">[7]</span> [Is Breast Truly Best? Estimating the Effect of Breastfeeding on Long-term Child Wellbeing in the United States Using Sibling Comparisons](https://pmc.ncbi.nlm.nih.gov/articles/PMC4077166/) <br>
+<span id="ref-8">[8]</span> [Breastfeeding and risk of overweight in childhood and beyond: a systematic review with emphasis on sibling-pair and intervention studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC8830309/) <br>
+<span id="ref-9">[9]</span> [Effect of breast feeding on intelligence in children: prospective study, sibling pairs analysis, and meta-analysis](https://pubmed.ncbi.nlm.nih.gov/17020911/) <br>
+<span id="ref-10">[10]</span> [Breastfeeding during infancy and neurocognitive function in adolescence: 16-year follow-up of the PROBIT cluster-randomized trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC5909901/) <br>
