@@ -5,6 +5,8 @@ title:  "The macroeconomics of agentic AI"
 date:   2026-02-17
 categories: general
 comments: false
+header:
+  og_image: /assets/images/agent_economy/race2.svg
 ---
 
 During the Industrial Revolution, machines displaced most Western agricultural workers, who later went on to cities and earned higher wages. However, some time later, the automobile displaced all horses, and they still haven't reallocated to new professions. In the coming decades, are we the 19th century peasant, or the horse?
@@ -170,7 +172,7 @@ This toy model is extended in [[5]](#ref-5). While the treatment is too complex 
 4. The creation of new tasks ($\uparrow N$) counteracts this and increases wages and employment.
 5. Therefore, the race between man and machine, or between new task creation $N$ and the automation frontier $I$ determines the long term outcome of employment.
 
-![race](/assets/images/agent_economy/race2.svg)
+![race](/assets/images/agent_economy/race2.png)
 
 In the context of agentic AI, this implies that if it's mostly a factor-augmenting technology - a 100x engineer pathway, where labour is needed to actively orchestrate tens of agents - wages increase and there is strong labour demand. However, if the agents are able to set and execute (sub)tasks autonomously, with supervision input not providing much value, then we are on the automation increase pathway. This can mean long run wage improvement, but will also decrease labour demand, unless new labour-specific tasks can be generated.
 
